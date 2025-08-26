@@ -3,9 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev --turbopack --hostname 10.66.66.1 --port 8811",
     "build": "next build --turbopack",
-    "start": "next start",
+    "build:stable": "next build",
+    "start": "next start --hostname 10.66.66.1 --port 8811",
+    "start:vpn": "next start --hostname 10.66.66.1 --port 8811",
+    "prod": "./start-vpn-server.sh",
     "lint": "eslint"
   },
   "dependencies": {

@@ -7,15 +7,39 @@ let db = null;
 
 function getDatabase() {
   if (!db) {
-    const dbPath = process.env.NODE_ENV === 'production' 
-      ? '/data/vpn.db' 
-      : path.join(process.cwd(), 'vpn.db');
+    let dbPath;
     
-    db = new Database(dbPath);
-    db.pragma('journal_mode = WAL');
-    db.pragma('foreign_keys = ON');
-    db.pragma('synchronous = NORMAL');
-    initializeDatabase();
+    // Durante la construcción, usa la ruta relativa
+    if (process.env.NODE_ENV === 'production' && !process.env.BUILD_TIME) {
+      dbPath = '/data/vpn.db';
+    } else {
+      // Para desarrollo y tiempo de construcción
+      dbPath = path.join(process.cwd(), 'data', 'vpn.db');
+    }
+    
+    console.log(`🗄️  Using database at: ${dbPath}`);
+    
+    try {
+      db = new Database(dbPath);
+      db.pragma('journal_mode = WAL');
+      db.pragma('foreign_keys = ON');
+      db.pragma('synchronous = NORMAL');
+      initializeDatabase();
+    } catch (error) {
+      console.error('❌ Database connection failed:', error.message);
+      // Durante construcción, crear una DB temporal si no existe
+      if (process.env.NODE_ENV === 'production') {
+        const tempPath = path.join(process.cwd(), 'data', 'vpn.db');
+        console.log(`🔄 Trying fallback path: ${tempPath}`);
+        db = new Database(tempPath);
+        db.pragma('journal_mode = WAL');
+        db.pragma('foreign_keys = ON');
+        db.pragma('synchronous = NORMAL');
+        initializeDatabase();
+      } else {
+        throw error;
+      }
+    }
   }
   return db;
 }
@@ -64,7 +88,7 @@ function initializeDatabase() {
       user_agent TEXT,
       details TEXT,
       severity TEXT DEFAULT 'info' CHECK (severity IN ('info', 'warning', 'error', 'critical')),
-      timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
+      created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
       FOREIGN KEY (user_id) REFERENCES users (id)
     )
   `);
@@ -94,7 +118,7 @@ function initializeDatabase() {
     CREATE INDEX IF NOT EXISTS idx_sessions_user_id ON sessions(user_id);
     CREATE INDEX IF NOT EXISTS idx_sessions_expires_at ON sessions(expires_at);
     CREATE INDEX IF NOT EXISTS idx_security_logs_user_id ON security_logs(user_id);
-    CREATE INDEX IF NOT EXISTS idx_security_logs_timestamp ON security_logs(timestamp);
+    CREATE INDEX IF NOT EXISTS idx_security_logs_created_at ON security_logs(created_at);
     CREATE INDEX IF NOT EXISTS idx_vpn_configs_user_id ON vpn_configs(user_id);
   `);
 
