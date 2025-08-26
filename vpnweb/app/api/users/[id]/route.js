@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { getServerSession } from 'next-auth/next';
+import { authOptions } from '../../../../lib/auth';
 import { UserQueries, SecurityQueries } from '../../../../lib/database';
 import { SecurityUtils } from '../../../../lib/security';
 import { headers } from 'next/headers';
@@ -31,6 +32,82 @@ function validateUserId(id) {
     return null;
   }
   return numericId;
+}
+
+export async function GET(request, { params }) {
+  let session;
+  try {
+    session = await getServerSession();
+    const headersList = headers();
+    const ipAddress = headersList.get('x-forwarded-for') || 'unknown';
+    const userId = validateUserId(params.id);
+
+    if (!userId) {
+      return NextResponse.json(
+        { error: 'ID de usuario inválido' },
+        { status: 400 }
+      );
+    }
+
+    // Rate limiting
+    if (!apiLimiter.check(`get_${ipAddress}`)) {
+      await logSecurityEvent(session, 'api_rate_limit_exceeded', { endpoint: `/api/users/${params.id}`, method: 'GET' }, 'warning');
+      return NextResponse.json(
+        { error: 'Rate limit exceeded' },
+        { status: 429 }
+      );
+    }
+
+    // Verificar autenticación
+    if (!session?.user) {
+      await logSecurityEvent(null, 'unauthorized_api_access', { endpoint: `/api/users/${params.id}`, method: 'GET' }, 'warning');
+      return NextResponse.json(
+        { error: 'No autorizado' },
+        { status: 401 }
+      );
+    }
+
+    // Verificar permisos de admin
+    if (session.user.role !== 'admin') {
+      await logSecurityEvent(session, 'insufficient_permissions', { endpoint: `/api/users/${params.id}`, method: 'GET' }, 'warning');
+      return NextResponse.json(
+        { error: 'Permisos insuficientes' },
+        { status: 403 }
+      );
+    }
+
+    // Obtener usuario
+    const user = UserQueries.getUserById(userId);
+    
+    if (!user) {
+      await logSecurityEvent(session, 'user_get_failed', { userId, reason: 'user_not_found' }, 'warning');
+      return NextResponse.json(
+        { error: 'Usuario no encontrado' },
+        { status: 404 }
+      );
+    }
+
+    // Remover información sensible
+    delete user.password_hash;
+
+    return NextResponse.json({
+      success: true,
+      data: user
+    });
+
+  } catch (error) {
+    console.error('Error getting user:', error);
+    
+    await logSecurityEvent(session, 'user_get_failed', { 
+      userId: params.id,
+      error: error.message 
+    }, 'error');
+
+    return NextResponse.json(
+      { error: 'Error interno del servidor' },
+      { status: 500 }
+    );
+  }
 }
 
 export async function PUT(request, { params }) {

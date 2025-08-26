@@ -50,9 +50,7 @@ export async function GET() {
     return NextResponse.json({
       success: true,
       count: enrichedPeers.length,
-      data: {
-        peers: enrichedPeers
-      },
+      peers: enrichedPeers,
       metadata: {
         source: 'wireguard_real',
         timestamp: new Date().toISOString(),
