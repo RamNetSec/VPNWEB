@@ -1,0 +1,136 @@
+LICENCIA COMERCIAL CON ATRIBUCIÓN REQUERIDA
+=====================================
+
+Copyright (c) 2025 RamNetSec
+
+TÉRMINOS Y CONDICIONES PARA USO, REPRODUCCIÓN Y DISTRIBUCIÓN
+
+1. DEFINICIONES
+
+   "Licencia" se refiere a los términos y condiciones para uso, reproducción,
+   y distribución definidos en este documento.
+
+   "Licenciante" se refiere al propietario del copyright o entidad autorizada
+   por el propietario del copyright que otorga la Licencia.
+
+   "Entidad Legal" se refiere a la unión de la entidad actuante y todas las
+   otras entidades que controlan, son controladas por, o están bajo control
+   común con esa entidad.
+
+   "Usted" (o "Su") se refiere a un individuo o Entidad Legal ejerciendo
+   permisos otorgados por esta Licencia.
+
+   "Código Fuente" se refiere a la forma preferida del trabajo para hacer
+   modificaciones al mismo, incluyendo pero no limitado a código fuente de
+   software, código fuente de documentación, y archivos de configuración.
+
+   "Trabajo" se refiere al trabajo de autoría disponible bajo esta Licencia,
+   indicado por un aviso de copyright incluido en o adjunto al trabajo.
+
+   "Trabajos Derivados" se refiere a cualquier trabajo, ya sea en Código
+   Fuente o forma de objeto, que esté basado en (o derivado de) el Trabajo.
+
+2. OTORGAMIENTO DE DERECHOS
+
+   Sujeto a los términos y condiciones de esta Licencia, el Licenciante
+   otorga a Usted una licencia perpetua, mundial, no exclusiva, libre de
+   regalías, irrevocable (excepto como se establece en esta sección) para:
+
+   a) Usar, reproducir, modificar, y distribuir el Trabajo y Trabajos Derivados
+      en forma de Código Fuente u objeto para cualquier propósito, incluyendo
+      propósitos comerciales.
+
+   b) Otorgar sublicencias de los derechos anteriores a terceros.
+
+3. REQUISITO DE ATRIBUCIÓN
+
+   Todas las copias o porciones sustanciales del Trabajo y Trabajos Derivados
+   DEBEN incluir el siguiente aviso de atribución de manera prominente y
+   claramente visible:
+
+   "Basado en VPNWEB desarrollado por RamNetSec (https://github.com/RamNetSec/VPNWEB)"
+
+   Esta atribución debe aparecer en:
+   - Interfaces de usuario de la aplicación
+   - Documentación del proyecto
+   - Archivos README
+   - Sobre/Acerca de páginas
+   - Cualquier material de marketing o promocional
+
+4. CONDICIONES ADICIONALES
+
+   a) La atribución requerida NO puede ser removida, modificada u oscurecida
+      de ninguna manera.
+
+   b) Si distribuye Trabajos Derivados, debe indicar claramente que son
+      modificaciones del trabajo original.
+
+   c) Esta licencia no otorga permisos para usar marcas comerciales, marcas
+      de servicio, o nombres comerciales del Licenciante, excepto para la
+      atribución requerida.
+
+5. LIMITACIÓN DE RESPONSABILIDAD
+
+   EN NINGÚN EVENTO, Y BAJO NINGUNA TEORÍA LEGAL, YA SEA EN TORT (INCLUYENDO
+   NEGLIGENCIA), CONTRATO, O DE OTRA MANERA, EL LICENCIANTE SERÁ RESPONSABLE
+   A USTED POR DAÑOS, INCLUYENDO CUALQUIER DAÑO DIRECTO, INDIRECTO, ESPECIAL,
+   INCIDENTAL, O CONSECUENCIAL DE CUALQUIER CARÁCTER QUE SURJA COMO RESULTADO
+   DE ESTA LICENCIA O DEL USO O INHABILIDAD DE USAR EL TRABAJO.
+
+6. DESCARGO DE GARANTÍA
+
+   A MENOS QUE SE REQUIERA POR LEY APLICABLE O SE ACUERDE POR ESCRITO, EL
+   LICENCIANTE PROPORCIONA EL TRABAJO EN BASE "TAL COMO ES", SIN GARANTÍAS O
+   CONDICIONES DE NINGÚN TIPO, YA SEA EXPRESA O IMPLÍCITA, INCLUYENDO, SIN
+   LIMITACIÓN, CUALQUIER GARANTÍA O CONDICIÓN DE TÍTULO, NO INFRACCIÓN,
+   COMERCIABILIDAD, O IDONEIDAD PARA UN PROPÓSITO PARTICULAR.
+
+7. TERMINACIÓN
+
+   Esta Licencia y los derechos otorgados aquí terminarán automáticamente
+   al fallar Usted en cumplir con sus términos y condiciones. Sin embargo,
+   las licencias otorgadas por Usted a terceros bajo esta Licencia no
+   terminarán mientras tales terceros permanezcan en total cumplimiento.
+
+8. ACEPTACIÓN
+
+   No está obligado a aceptar esta Licencia para recibir o ejecutar una copia
+   del Trabajo. Sin embargo, nada más le otorga permisos para modificar o
+   distribuir el Trabajo o sus Trabajos Derivados. Estas acciones están
+   prohibidas por ley si no acepta esta Licencia. Por lo tanto, al modificar
+   o distribuir el Trabajo (o cualquier Trabajo Derivado basado en el Trabajo),
+   indica su aceptación de esta Licencia para hacerlo, y todos sus términos
+   y condiciones para copiar, distribuir o modificar el Trabajo o trabajos
+   basados en él.
+
+9. LEY APLICABLE
+
+   Esta Licencia se regirá e interpretará de acuerdo con las leyes aplicables,
+   sin dar efecto a ninguna elección de principios de ley o conflicto de leyes.
+
+=====================================
+
+RESUMEN PARA DESARROLLADORES:
+
+✅ PERMITIDO:
+- Uso comercial
+- Distribución
+- Modificación
+- Uso privado
+- Sublicencias
+
+⚠️ REQUERIDO:
+- Incluir aviso de copyright
+- Incluir texto de licencia
+- Dar crédito prominente: "Basado en VPNWEB desarrollado por RamNetSec"
+- Mantener atribución visible en interfaces de usuario
+
+❌ PROHIBIDO:
+- Remover o modificar la atribución requerida
+- Usar marcas comerciales sin permiso
+- Presentar como trabajo completamente propio
+
+Para más información o consultas comerciales específicas, contacte:
+RamNetSec - GitHub: https://github.com/RamNetSec
+
+Fecha: 26 de Agosto, 2025

@@ -375,10 +375,35 @@ export default function LoginPage() {
                     alignItems: 'center',
                     justifyContent: 'center',
                     gap: 1,
+                    mb: 1,
                   }}
                 >
                   <Security fontSize="small" />
                   © 2025 VPN Admin Panel - Protegido con autenticación segura
+                </Typography>
+                
+                <Typography
+                  variant="caption"
+                  sx={{
+                    color: 'text.secondary',
+                    textAlign: 'center',
+                    fontSize: '0.7rem',
+                    opacity: 0.8,
+                  }}
+                >
+                  Basado en VPNWEB desarrollado por{' '}
+                  <Box
+                    component="span"
+                    sx={{
+                      fontWeight: 600,
+                      background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                      backgroundClip: 'text',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                    }}
+                  >
+                    RamNetSec
+                  </Box>
                 </Typography>
               </Box>
             </Fade>

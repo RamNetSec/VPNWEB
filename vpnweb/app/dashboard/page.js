@@ -826,6 +826,55 @@ export default function Dashboard() {
             </Button>
           </DialogActions>
         </Dialog>
+        
+        {/* Footer con atribución */}
+        <Box
+          sx={{
+            mt: 6,
+            py: 3,
+            borderTop: '1px solid',
+            borderColor: 'divider',
+            textAlign: 'center',
+          }}
+        >
+          <Typography
+            variant="body2"
+            sx={{
+              color: 'text.secondary',
+              mb: 1,
+            }}
+          >
+            © 2025 VPN Admin Panel - Panel de administración seguro
+          </Typography>
+          <Typography
+            variant="caption"
+            sx={{
+              color: 'text.secondary',
+              fontSize: '0.75rem',
+            }}
+          >
+            Basado en{' '}
+            <Box
+              component="span"
+              sx={{
+                fontWeight: 600,
+                color: 'primary.main',
+              }}
+            >
+              VPNWEB
+            </Box>
+            {' '}desarrollado por{' '}
+            <Box
+              component="span"
+              sx={{
+                fontWeight: 600,
+                color: 'primary.main',
+              }}
+            >
+              RamNetSec
+            </Box>
+          </Typography>
+        </Box>
       </Container>
     </Box>
   );

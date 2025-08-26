@@ -1,6 +1,27 @@
 {
   "name": "vpnweb",
   "version": "0.1.0",
+  "description": "Panel de administración moderno para gestionar usuarios de WireGuard VPN",
+  "author": {
+    "name": "RamNetSec",
+    "url": "https://github.com/RamNetSec"
+  },
+  "license": "SEE LICENSE IN ../LICENSE",
+  "homepage": "https://github.com/RamNetSec/VPNWEB",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RamNetSec/VPNWEB.git"
+  },
+  "keywords": [
+    "vpn",
+    "wireguard",
+    "admin",
+    "dashboard",
+    "nextjs",
+    "react",
+    "material-ui",
+    "sqlite"
+  ],
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack --hostname 10.66.66.1 --port 8811",

@@ -1,0 +1,138 @@
+COMMERCIAL LICENSE WITH REQUIRED ATTRIBUTION
+========================================
+
+Copyright (c) 2025 RamNetSec
+
+TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+1. DEFINITIONS
+
+   "License" shall mean the terms and conditions for use, reproduction,
+   and distribution as defined by this document.
+
+   "Licensor" shall mean the copyright owner or entity authorized by
+   the copyright owner that is granting the License.
+
+   "Legal Entity" shall mean the union of the acting entity and all
+   other entities that control, are controlled by, or are under common
+   control with that entity.
+
+   "You" (or "Your") shall mean an individual or Legal Entity
+   exercising permissions granted by this License.
+
+   "Source" form shall mean the preferred form for making modifications,
+   including but not limited to software source code, documentation
+   source, and configuration files.
+
+   "Work" shall mean the work of authorship made available under this
+   License, as indicated by a copyright notice that is included in or
+   attached to the work.
+
+   "Derivative Works" shall mean any work, whether in Source or Object
+   form, that is based on (or derived from) the Work.
+
+2. GRANT OF RIGHTS
+
+   Subject to the terms and conditions of this License, the Licensor hereby
+   grants to You a perpetual, worldwide, non-exclusive, no-charge, royalty-free,
+   irrevocable (except as stated in this section) license to:
+
+   a) Use, reproduce, modify, and distribute the Work and Derivative Works
+      thereof in Source or Object form for any purpose, including commercial
+      purposes.
+
+   b) Grant sublicenses of the foregoing rights to third parties.
+
+3. ATTRIBUTION REQUIREMENT
+
+   All copies or substantial portions of the Work and Derivative Works
+   MUST include the following attribution notice in a prominent and
+   clearly visible manner:
+
+   "Based on VPNWEB developed by RamNetSec (https://github.com/RamNetSec/VPNWEB)"
+
+   This attribution must appear in:
+   - Application user interfaces
+   - Project documentation
+   - README files
+   - About/Credits pages
+   - Any marketing or promotional materials
+
+4. ADDITIONAL CONDITIONS
+
+   a) The required attribution MAY NOT be removed, modified, or obscured
+      in any way.
+
+   b) If You distribute Derivative Works, You must clearly indicate that
+      they are modifications of the original work.
+
+   c) This license does not grant permission to use the trade names,
+      trademarks, service marks, or product names of the Licensor, except
+      for the required attribution.
+
+5. LIMITATION OF LIABILITY
+
+   IN NO EVENT AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING
+   NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE LICENSOR BE LIABLE TO
+   YOU FOR DAMAGES, INCLUDING ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL,
+   OR CONSEQUENTIAL DAMAGES OF ANY CHARACTER ARISING AS A RESULT OF THIS
+   LICENSE OR OUT OF THE USE OR INABILITY TO USE THE WORK.
+
+6. DISCLAIMER OF WARRANTY
+
+   UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING, LICENSOR
+   PROVIDES THE WORK ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS
+   OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, WITHOUT LIMITATION,
+   ANY WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY,
+   OR FITNESS FOR A PARTICULAR PURPOSE.
+
+7. TERMINATION
+
+   This License and the rights granted hereunder will terminate automatically
+   upon any breach by You of the terms of this License. However, sublicenses
+   granted by You to third parties under this License shall not terminate
+   so long as such third parties remain in full compliance.
+
+8. ACCEPTANCE
+
+   You are not required to accept this License in order to receive or
+   run a copy of the Work. However, nothing other than this License grants
+   You permission to modify or distribute the Work or its Derivative Works.
+   These actions are prohibited by law if You do not accept this License.
+   Therefore, by modifying or distributing the Work (or any Derivative Work
+   based on the Work), You indicate Your acceptance of this License to do so,
+   and all its terms and conditions for copying, distributing or modifying
+   the Work or works based on it.
+
+9. GOVERNING LAW
+
+   This License shall be governed by and construed in accordance with
+   applicable law, without giving effect to any choice of law or conflict
+   of law provisions.
+
+=====================================
+
+DEVELOPER SUMMARY:
+
+✅ PERMITTED:
+- Commercial use
+- Distribution
+- Modification
+- Private use
+- Sublicensing
+
+⚠️ REQUIRED:
+- Include copyright notice
+- Include license text
+- Prominent credit: "Based on VPNWEB developed by RamNetSec"
+- Keep attribution visible in user interfaces
+
+❌ PROHIBITED:
+- Remove or modify required attribution
+- Use trademarks without permission
+- Present as entirely your own work
+
+For more information or specific commercial inquiries, contact:
+RamNetSec - GitHub: https://github.com/RamNetSec
+
+Date: August 26, 2025
