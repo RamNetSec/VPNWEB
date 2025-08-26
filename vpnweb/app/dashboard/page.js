@@ -3,7 +3,7 @@ import { useAuth } from '../../context/AuthContext';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { TextField, Button, Container, List, ListItem, ListItemText } from '@mui/material';
-import anime from 'animejs';
+import { animate } from 'animejs';
 
 export default function Dashboard() {
   const { auth } = useAuth();
@@ -18,8 +18,8 @@ export default function Dashboard() {
       router.push('/');
       return;
     }
-    fetchUsers();
-    anime({ targets: '#dashboard', opacity: [0, 1], duration: 500 });
+  fetchUsers();
+  animate({ targets: '#dashboard', opacity: [0, 1], duration: 500 });
   }, [auth, router]);
 
   const fetchUsers = async () => {
