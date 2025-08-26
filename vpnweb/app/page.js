@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { TextField, Button, Container, Typography } from '@mui/material';
 import { useAuth } from '../context/AuthContext';
 import { useRouter } from 'next/navigation';
-import { animate } from 'animejs';
+import { animate as anime } from 'animejs';
 
 export default function LoginPage() {
   const [user, setUser] = useState('');
@@ -12,7 +12,7 @@ export default function LoginPage() {
   const router = useRouter();
 
   useEffect(() => {
-    animate({
+    anime({
       targets: '#login-form',
       opacity: [0, 1],
       translateY: [-20, 0],
